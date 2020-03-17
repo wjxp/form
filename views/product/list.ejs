@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>商品列表</title>
+    <link
+      href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contaniner">
+      <div class="panel panel-info">
+        <div class="panel-body">
+          商品列表
+        </div>
+      </div>
+      <a href="/products/new" class="btn btn-primary">新增</a>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>商品id</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品简介</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%data.forEach(item=>{%>
+          <tr>
+            <td><%= item.pid %></td>
+            <td><%= item.pname %></td>
+            <td><%= item.pprice %></td>
+            <td><%= item.pdesc %></td>
+          </tr>
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
